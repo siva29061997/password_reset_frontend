@@ -19,7 +19,7 @@ function Reset() {
   let loadData = async () => {
 
     try {
-      let verifiction = await axios.get("http://localhost:5000/token-verify", {
+      let verifiction = await axios.get("https://passwordreset-flow.herokuapp.com/token-verify", {
         headers: {
           'authorization': token
         }
@@ -58,7 +58,7 @@ function Reset() {
     onSubmit: async (values) => {
       try {
         console.log(values)
-        await axios.put("http://localhost:5000/update", values, {
+        await axios.put("https://passwordreset-flow.herokuapp.com/update", values, {
           headers: {
             'authorization': token
           }
